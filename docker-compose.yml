@@ -1,0 +1,11 @@
+web:
+  build: web/
+  links:
+  - postgres
+  ports:
+  - "80:80"
+  - "1086:1086"
+  volumes:
+  - "./logs:/woapps/logs"
+postgres:
+  build: postgres/
